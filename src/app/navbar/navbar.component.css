@@ -1,6 +1,10 @@
 .nav > li > a:hover{
   background-color:royalblue;
+  border-radius:10px;
 }
 .nav > li {
   padding-left:20px;
+}
+.active{
+  border-radius:10px;
 }

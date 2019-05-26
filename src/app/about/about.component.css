@@ -1,0 +1,25 @@
+.author-text{
+  width:200px;
+}
+.container{
+  display:grid;
+  grid-template-columns: 1fr 1.5fr ;
+  align-items: center;
+  justify-items:center;
+  align-content: space-between;
+  justify-content: space-around;
+  align-self: center;
+  justify-self: center;
+  margin-top:100px;
+}
+.text{
+  font-size:20px;
+  width:400px;
+  text-align: justify;
+}
+.img{
+  background-image: url("author.jpg");
+  width:338px;
+  height: 338px;
+}
+
