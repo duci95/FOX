@@ -1,0 +1,40 @@
+<div class="col-lg-10 m-auto">
+  <h5 class="alert-info p-lg-2 text-capitalize text-center">Send us your opinions about site</h5>
+  <form class="m-auto col-lg-5" [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label class="text-muted" for="FirstName">Firstname</label>
+    <input  type="text" id="FirstName" formControlName="FirstName" class="form-control ">
+    <span class="text-danger" *ngIf="!messageForm.get('FirstName').valid && messageForm.get('FirstName').touched">
+        Firstname is required!
+     </span>
+  </div>
+  <div class="form-group ">
+    <label class="text-muted" for="LastName">Lastname</label>
+    <input  type="text" id="LastName" formControlName="LastName" class="form-control ">
+    <span class="text-danger " *ngIf="!messageForm.get('LastName').valid && messageForm.get('LastName').touched">
+        Lastname is required!
+    </span>
+  </div>
+  <div class="form-group">
+    <label class="text-muted" for="Email">Email</label>
+    <input type="email" id="Email" formControlName="Email" class="form-control">
+    <span class="text-danger" *ngIf="!messageForm.get('Email').valid && messageForm.get('Email').touched">
+        Email is required!
+    </span>
+  </div>
+    <div class="form-group">
+      <label class="text-muted" for="Content">Content</label>
+      <textarea  id="Content" formControlName="Content" class="form-control" rows="10"></textarea>
+      <span class="text-danger" *ngIf="!messageForm.get('Content').valid && messageForm.get('Content').touched">
+        Content is required!
+      </span>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Send" class="btn btn-primary form-control" />
+      <span class="text-success" *ngIf="!messageForm.">
+        Success!
+      </span>
+    </div>
+  </form>
+</div>
+<span class="clearfix"></span>

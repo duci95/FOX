@@ -1,3 +1,19 @@
 <div class="container">
+  <div class="alert alert-primary text-uppercase text-center" role="alert">
+    Please check out our top recommendations !
+  </div>
+  <ul>
+<li *ngFor="let item of series">
+  <h5 class="card-header text-capitalize border-primary">{{item.title}}</h5>
+  <h6 class="text-right text-info">Genre: {{item.genre}}</h6>
+  <h6>Roles:</h6>
+  <ul class="col-md-5">
+    <li *ngFor="let r of item.roles">
+      <p class="text-muted flex-row">{{r.firstName }} {{r.lastName}}</p>
+    </li>
+  </ul>
+</li>
 
+  </ul>
 </div>
+
