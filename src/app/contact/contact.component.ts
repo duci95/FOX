@@ -19,6 +19,9 @@ export class ContactComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.messageForm.value);
+    if(!this.messageForm.invalid){
+      alert("Uspešno ste poslali podatke!");
+    }
   }
 }
 
